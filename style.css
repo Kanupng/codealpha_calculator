@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.calculator {
+    width: 350px;
+    padding: 25px;
+
+    background: #1e1e2f;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Display */
+
+.display {
+    background: #11111c;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#previous-display {
+    height: 25px;
+    text-align: right;
+    color: #999;
+    font-size: 14px;
+}
+
+#display {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: right;
+
+    font-size: 35px;
+
+    padding: 5px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+button {
+    height: 65px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #2d2d44;
+
+    color: white;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: #3d3d59;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operators */
+
+.operator {
+    background: #f39c12;
+}
+
+.operator:hover {
+    background: #e08e0b;
+}
+
+/* Clear */
+
+.clear {
+    background: #e74c3c;
+}
+
+.clear:hover {
+    background: #d63c2e;
+}
+
+/* Delete */
+
+.delete {
+    background: #8e44ad;
+}
+
+.delete:hover {
+    background: #783794;
+}
+
+/* Equal */
+
+.equal {
+    background: #27ae60;
+}
+
+.equal:hover {
+    background: #219150;
+}
+
+/* Zero button */
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Footer */
+
+.credit {
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+/* Responsive design */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        height: 55px;
+        font-size: 18px;
+    }
+
+    #display {
+        font-size: 28px;
+    }
+}
